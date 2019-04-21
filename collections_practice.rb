@@ -79,6 +79,24 @@ end
   
   
 def organize_schools(schools)
+  organized_schools = {}
+  nyc_array = []
+  sf_array=[]
+  chicago_array =[]
   
+  schools.each do |name, information|
+    if information[:location]=="NYC"
+      nyc_array<< name
+    elsif information[:location]=="SF"
+      sf_array<< name
+    else information[:location]== "Chicago"
+      chicago_array<< name
+    end
+    
+  organized_schools["Chicago"]=chicago_array
+  organized_schools["SF"]=sf_array
+  organized_schools["NYC"]=nyc_array
+  
+  return organized_schools
   
 end
