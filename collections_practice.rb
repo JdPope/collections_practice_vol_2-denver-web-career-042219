@@ -92,11 +92,11 @@ def organize_schools(schools)
     else information[:location]== "Chicago"
       chicago_array<< name
     end
-    
+   end 
   organized_schools["Chicago"]=chicago_array
   organized_schools["SF"]=sf_array
   organized_schools["NYC"]=nyc_array
   
   return organized_schools
-  
+
 end
